@@ -1,0 +1,691 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
+<meta content="FLARManager,com.transmote.flar.FLARManager,activeMarkers,cameraParams,flarSource,isActive,markerRemovalDelay,markerUpdateThreshold,minimumLabelSize,mirrorDisplay,numLoadedPatterns,sampleBlurring,smoother,smoothing,threshold,thresholdAdapter,thresholdSourceDisplay,verbose,activate,deactivate,dispose,initFromFile,initFromXML,initManual" name="keywords">
+<title>com.transmote.flar.FLARManager</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'FLARManager - FLARManager Reference';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">FLARManager Reference</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../index-list.html')" href="../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../index.html?com/transmote/flar/FLARManager.html&amp;com/transmote/flar/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;FLARManager</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class FLARManager"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.transmote.flar</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class FLARManager</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">FLARManager <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../images/inherit-arrow.gif"> flash.events.EventDispatcher</td>
+</tr>
+</table>
+<p></p>
+  <p>
+  Manager for computer vision applications using FLARToolkit
+  (<a href="http://www.libspark.org/wiki/saqoosha/FLARToolKit/en" target="_blank">
+  http://www.libspark.org/wiki/saqoosha/FLARToolKit/en</a>).
+  </p>
+  <p>
+  Basic usage is as follows:
+  Pass a path to a camera parameters file and a list of FLARPatterns to the constructor.
+  Optionally pass an IFLARSource to use as the source image for marker detection;
+  FLARManager will by default create a FLARCameraSource that uses the first available camera.
+  Alternatively, FLARManager can be initialized using an xml file that specifies the above and other settings.
+  </p>
+  <p>
+  Assign event listeners to FLARManager for MARKER_ADDED,
+  MARKER_UPDATED, and MARKER_REMOVED FLARMarkerEvents.
+  These FLARMarkerEvents encapsulate the FLARMarker instances that they refer to.
+  Alternatively, it is possible to retrieve all active markers
+  directly from FLARManager, via FLARManager.activeMarkers.
+  </p>
+  <p>
+  FLARMarkers are simple objects that contain information about detected markers
+  provided by FLARToolkit.  FLARManager maintains a list of active markers,
+  and updates the list and the markers within every frame.
+  </p>
+  
+  <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="marker/FLARMarkerEvent.html" target="">marker/FLARMarkerEvent.html</a>
+<br>
+<a href="source/FLARCameraSource.html" target="">source/FLARCameraSource.html</a>
+<br>
+<a href="utils/FLARProxy.html" target="">utils/FLARProxy.html</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#activeMarkers">activeMarkers</a> : Vector<div class="summaryTableDescription">[read-only]
+   Vector of all currently-active markers.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#cameraParams">cameraParams</a> : FLARParam<div class="summaryTableDescription">[read-only]
+   FLARParam used by this FLARManager.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#flarSource">flarSource</a> : <a href="source/IFLARSource.html">IFLARSource</a>
+<div class="summaryTableDescription">[read-only]
+   IFLARSource instance this FLARManager is using as the source image for marker detection.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#isActive">isActive</a> : Boolean<div class="summaryTableDescription">
+   true if this FLARManager instance is active and currently processing marker detection.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#markerRemovalDelay">markerRemovalDelay</a> : int<div class="summaryTableDescription">
+   number of frames after removal that a marker will persist before dispatching a MARKER_REMOVED event.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#markerUpdateThreshold">markerUpdateThreshold</a> : Number<div class="summaryTableDescription">
+   if a detected marker is within this distance (pixels) from an active marker,
+   FLARManager considers the detected marker to be an update of the active marker.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#minimumLabelSize">minimumLabelSize</a> : Number<div class="summaryTableDescription">
+   provides direct access to FLARLabeling_BitmapData.minimumLabelSize,
+   which is the minimum size (widtheight) a dark area of the source image must be
+   in order to become a candidate for marker outline detection.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#mirrorDisplay">mirrorDisplay</a> : Boolean<div class="summaryTableDescription">
+   set to true to flip the camera image horizontally;
+   this value is passed on to this.flarSource;
+   note that if an IFLARSource is specified after mirrorDisplay is set,
+   the 'mirrored' property of the new IFLARSource will overwrite this value.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#numLoadedPatterns">numLoadedPatterns</a> : int<div class="summaryTableDescription">[read-only]
+   the number of patterns loaded for detection.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#sampleBlurring">sampleBlurring</a> : int<div class="summaryTableDescription">
+   the amount of blur applied to the source image
+   before sending to FLARToolkit for marker detection.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#smoother">smoother</a> : <a href="utils/smoother/IFLARMatrixSmoother.html">IFLARMatrixSmoother</a>
+<div class="summaryTableDescription">
+   IFLARMatrixSmoother to use to apply smoothing to transformation matrices generated by FLARToolkit.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#smoothing">smoothing</a> : int<div class="summaryTableDescription">
+   apply a smoothing algorithm to transformation matrices generated by FLARToolkit.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#threshold">threshold</a> : int<div class="summaryTableDescription">
+   pixels in source image with a brightness <= to this.threshold are candidates for marker outline detection.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#thresholdAdapter">thresholdAdapter</a> : <a href="utils/threshold/IThresholdAdapter.html">IThresholdAdapter</a>
+<div class="summaryTableDescription">
+   IFLARThresholdAdapter used to automate threshold changes.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#thresholdSourceDisplay">thresholdSourceDisplay</a> : Boolean<div class="summaryTableDescription">
+   display the source BitmapData used by FLARToolkit post-thresholding.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#verbose">verbose</a> : Boolean<div class="summaryTableDescription">
+   if true, FLARManager will output configuration changes to the console.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#FLARManager()">FLARManager</a>(flarConfigPath:String = "")</div>
+<div class="summaryTableDescription">
+   Constructor.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#activate()">activate</a>():Boolean</div>
+<div class="summaryTableDescription">
+   begin detecting markers once per frame.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#deactivate()">deactivate</a>():void</div>
+<div class="summaryTableDescription">
+   stop detecting markers.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#dispose()">dispose</a>():void</div>
+<div class="summaryTableDescription">
+   halts all processes and frees this instance for garbage collection.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#initFromFile()">initFromFile</a>(flarConfigPath:String):void</div>
+<div class="summaryTableDescription">
+   load FLARManager configuration from an xml file.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#initFromXML()">initFromXML</a>(flarConfigXML:XML):void</div>
+<div class="summaryTableDescription">
+   init from an XML object in Flash.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#initManual()">initManual</a>(cameraParamsPath:String, patterns:Vector, source:<a href="source/IFLARSource.html">IFLARSource</a> = null):void</div>
+<div class="summaryTableDescription">
+   the old-fashioned way to initialize FLARManager.</div>
+</td><td class="summaryTableOwnerCol">FLARManager</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="activeMarkers"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">activeMarkers</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>activeMarkers:Vector</code>&nbsp;&nbsp;[read-only]<p>
+   Vector of all currently-active markers.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get activeMarkers():Vector</code>
+<br>
+</div>
+<a name="cameraParams"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">cameraParams</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>cameraParams:FLARParam</code>&nbsp;&nbsp;[read-only]<p>
+   FLARParam used by this FLARManager.
+   can be used to instantiate a FLARCamera3D for use with Papervision.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get cameraParams():FLARParam</code>
+<br>
+</div>
+<a name="flarSource"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">flarSource</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>flarSource:<a href="source/IFLARSource.html">IFLARSource</a></code>&nbsp;&nbsp;[read-only]<p>
+   IFLARSource instance this FLARManager is using as the source image for marker detection.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get flarSource():<a href="source/IFLARSource.html">IFLARSource</a></code>
+<br>
+</div>
+<a name="isActive"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isActive</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>isActive:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   true if this FLARManager instance is active and currently processing marker detection.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isActive():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set isActive(value:Boolean):void</code>
+<br>
+</div>
+<a name="markerRemovalDelay"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">markerRemovalDelay</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>markerRemovalDelay:int</code>&nbsp;&nbsp;[read-write]<p>
+   number of frames after removal that a marker will persist before dispatching a MARKER_REMOVED event.
+   if a marker of the same pattern appears within <tt>markerUpdateThreshold</tt> pixels
+   of the point of removal, before <tt>markerRemovalDelay</tt> frames have elapsed,
+   the marker will be reinstated as if it was never removed.
+   
+   the default value is 1.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get markerRemovalDelay():int</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set markerRemovalDelay(value:int):void</code>
+<br>
+</div>
+<a name="markerUpdateThreshold"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">markerUpdateThreshold</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>markerUpdateThreshold:Number</code>&nbsp;&nbsp;[read-write]<p>
+   if a detected marker is within this distance (pixels) from an active marker,
+   FLARManager considers the detected marker to be an update of the active marker.
+   else, the detected marker is a new marker.
+   increase this value to accommodate faster-moving markers;
+   decrease it to accommodate more markers on-screen at once.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get markerUpdateThreshold():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set markerUpdateThreshold(value:Number):void</code>
+<br>
+</div>
+<a name="minimumLabelSize"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">minimumLabelSize</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>minimumLabelSize:Number</code>&nbsp;&nbsp;[read-write]<p>
+   provides direct access to FLARLabeling_BitmapData.minimumLabelSize,
+   which is the minimum size (widtheight) a dark area of the source image must be
+   in order to become a candidate for marker outline detection.
+   higher values result in faster performance,
+   but poorer marker detection at smaller sizes (as they appear on-screen).
+   defaults to 100.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get minimumLabelSize():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set minimumLabelSize(value:Number):void</code>
+<br>
+</div>
+<a name="mirrorDisplay"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mirrorDisplay</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>mirrorDisplay:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   set to true to flip the camera image horizontally;
+   this value is passed on to this.flarSource;
+   note that if an IFLARSource is specified after mirrorDisplay is set,
+   the 'mirrored' property of the new IFLARSource will overwrite this value. 
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mirrorDisplay():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set mirrorDisplay(value:Boolean):void</code>
+<br>
+</div>
+<a name="numLoadedPatterns"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">numLoadedPatterns</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>numLoadedPatterns:int</code>&nbsp;&nbsp;[read-only]<p>
+   the number of patterns loaded for detection.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get numLoadedPatterns():int</code>
+<br>
+</div>
+<a name="sampleBlurring"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sampleBlurring</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>sampleBlurring:int</code>&nbsp;&nbsp;[read-write]<p>
+   the amount of blur applied to the source image
+   before sending to FLARToolkit for marker detection.
+   higher values increase framerate, but reduce detection accuracy.
+   value must be zero or greater.  the default value is 2.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get sampleBlurring():int</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set sampleBlurring(value:int):void</code>
+<br>
+</div>
+<a name="smoother"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">smoother</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>smoother:<a href="utils/smoother/IFLARMatrixSmoother.html">IFLARMatrixSmoother</a></code>&nbsp;&nbsp;[read-write]<p>
+   IFLARMatrixSmoother to use to apply smoothing to transformation matrices generated by FLARToolkit.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get smoother():<a href="utils/smoother/IFLARMatrixSmoother.html">IFLARMatrixSmoother</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set smoother(value:<a href="utils/smoother/IFLARMatrixSmoother.html">IFLARMatrixSmoother</a>):void</code>
+<br>
+</div>
+<a name="smoothing"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">smoothing</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>smoothing:int</code>&nbsp;&nbsp;[read-write]<p>
+   apply a smoothing algorithm to transformation matrices generated by FLARToolkit.
+   smoothing is equal to the number of frames over which FLARManager
+   will average transformation matrices; the larger the number, the smoother the animation,
+   and the slower the response time between marker position/orientation changes.
+   a value of 0 turns smoothing off.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get smoothing():int</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set smoothing(value:int):void</code>
+<br>
+</div>
+<a name="threshold"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">threshold</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>threshold:int</code>&nbsp;&nbsp;[read-write]<p>
+   pixels in source image with a brightness <= to this.threshold are candidates for marker outline detection.
+   increase to increase likelihood of marker detection;
+   increasing too high will cause engine to incorrectly detect non-existent markers.
+   defaults to 80 (values can range from 0 to 255).
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get threshold():int</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set threshold(value:int):void</code>
+<br>
+</div>
+<a name="thresholdAdapter"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">thresholdAdapter</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>thresholdAdapter:<a href="utils/threshold/IThresholdAdapter.html">IThresholdAdapter</a></code>&nbsp;&nbsp;[read-write]<p>
+   IFLARThresholdAdapter used to automate threshold changes.
+   
+   adaptive thresholding can result in better marker detection across a range of illumination.
+   this is desirable for applications with low lighting, or in which the developer has little control
+   over lighting conditions, such as with web applications.
+   
+   note that adaptive thresholding may cause slower performance in very dark environments.
+   this happens because a low threshold creates an image with large black areas,
+   and images with a lot of black can cause slowdown in FLARToolkit's labeling process
+   (FLARLabeling_BitmapData.labeling()).  in this case, thresholdAdapter should be set to null.
+   
+   the default threshold adapter is DrunkWalkThresholdAdapter, but developers can implement their own
+   algorithms for adaptive thresholding.  to do so, implement the IThresholdAdapter interface.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get thresholdAdapter():<a href="utils/threshold/IThresholdAdapter.html">IThresholdAdapter</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set thresholdAdapter(value:<a href="utils/threshold/IThresholdAdapter.html">IThresholdAdapter</a>):void</code>
+<br>
+</div>
+<a name="thresholdSourceDisplay"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">thresholdSourceDisplay</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>thresholdSourceDisplay:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   display the source BitmapData used by FLARToolkit post-thresholding.
+   useful for debugging.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get thresholdSourceDisplay():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set thresholdSourceDisplay(value:Boolean):void</code>
+<br>
+</div>
+<a name="verbose"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">verbose</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>verbose:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   if true, FLARManager will output configuration changes to the console.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get verbose():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set verbose(value:Boolean):void</code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="FLARManager()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">FLARManager</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function FLARManager(flarConfigPath:String = "")</code><p>
+   Constructor.
+   Initialize FLARManager by passing in a configuration file path.
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">flarConfigPath</span>:String</code> (default = "<code></code>")<code></code> &mdash; path to the FLARManager configuration xml file.
+   </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="activate()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">activate</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function activate():Boolean</code><p>
+   begin detecting markers once per frame.
+   this method is called automatically on initialization.
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash;  false if FLARManager is not yet initialized; else true.
+   </td>
+</tr>
+</table>
+</div>
+<a name="deactivate()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">deactivate</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function deactivate():void</code><p>
+   stop detecting markers.
+   removes all currently-active markers.
+   enterframe loop continues, to update video.
+   </p></div>
+<a name="dispose()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function dispose():void</code><p>
+   halts all processes and frees this instance for garbage collection.
+   </p></div>
+<a name="initFromFile()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">initFromFile</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function initFromFile(flarConfigPath:String):void</code><p>
+   load FLARManager configuration from an xml file.
+   note, this method no longer needs to be called manually;
+   simply passing the configuration file path into the constructor
+   will also initialize correctly.  this method is here for legacy support only.
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">flarConfigPath</span>:String</code> &mdash; path to the FLARManager configuration xml file.
+   </td>
+</tr>
+</table>
+</div>
+<a name="initFromXML()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">initFromXML</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function initFromXML(flarConfigXML:XML):void</code><p>
+   init from an XML object in Flash.
+   this can be useful when dynamically generating an XML file at runtime,
+   such as via a middleware request.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">flarConfigXML</span>:XML</code></td>
+</tr>
+</table>
+</div>
+<a name="initManual()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">initManual</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function initManual(cameraParamsPath:String, patterns:Vector, source:<a href="source/IFLARSource.html">IFLARSource</a> = null):void</code><p>
+   the old-fashioned way to initialize FLARManager.
+   the preferred method is to use an external xml configuration file,
+   and to pass its path into the FLARManager constructor.
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">cameraParamsPath</span>:String</code> &mdash; camera parameters filename.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">patterns</span>:Vector</code> &mdash;   list of FLARPatterns to detect.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">source</span>:<a href="source/IFLARSource.html">IFLARSource</a></code> (default = <code>null</code>)<code></code> &mdash;    IFLARSource instance to use as source image for marker detection.
+            if null, FLARManager will create a camera capture source.
+   </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">By Eric Socolofsky, http://transmote.com.  Released under the GNU GPL (http://www.gnu.org/copyleft/gpl.html).</center>
+</div>
+</body>
+</html>
+<!--By Eric Socolofsky, http://transmote.com.  Released under the GNU GPL (http://www.gnu.org/copyleft/gpl.html).-->

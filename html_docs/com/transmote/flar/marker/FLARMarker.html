@@ -1,0 +1,920 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="FLARMarker,com.transmote.flar.marker.FLARMarker,_centerpoint2D,_centerpoint3D,_confidence,_direction,_flarPattern,_flarSource,_flarSquare,_patternId,_rotationX,_rotationY,_rotationZ,_sessionId,_transformMatrix,_vector3D,centerpoint,centerpoint3D,confidence,corners,direction,flarSquare,matrix2D,matrix3D,patternId,rotation2D,rotationX,rotationY,rotationZ,scale2D,sessionId,targetCenterpoint3D,transformMatrix,vector3D,x,y,z,applySmoothing,copy,dispose,incrementRemovalAge,resetRemovalAge,setSessionId,toString" name="keywords">
+<title>com.transmote.flar.marker.FLARMarker</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'FLARMarker - FLARManager Reference';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">FLARManager Reference</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/transmote/flar/marker/FLARMarker.html&amp;com/transmote/flar/marker/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;FLARMarker</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class FLARMarker"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.transmote.flar.marker</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class FLARMarker</td>
+</tr>
+</table>
+<p></p>
+  <p>
+  Container for information about a detected marker, including:<br>
+  <ul>
+  <li>pattern and session ids</li>
+  <li>centerpoint of marker</li>
+  <li>corners of marker outline</li>
+  <li>Vector3D instance that describes x, y, and z location, and rotation (in the z-axis) of marker</li>
+  <li>rotation of marker around x, y, and z axes</li>
+  </ul>
+  </p>
+  
+  <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../marker/FLARMarkerEvent.html" target="">../marker/FLARMarkerEvent.html</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#centerpoint">centerpoint</a> : Point<div class="summaryTableDescription">[read-only]
+   centerpoint of marker outline in the 2D space of the screen,
+   calculated as the average of the outline's four corner points.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_centerpoint2D">_centerpoint2D</a> : Point = null<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_centerpoint3D">_centerpoint3D</a> : Point = null<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#centerpoint3D">centerpoint3D</a> : Point<div class="summaryTableDescription">[read-only]
+   centerpoint of marker outline extracted from FLARToolkit transformation matrix.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_confidence">_confidence</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#confidence">confidence</a> : Number<div class="summaryTableDescription">[read-only]
+   'confidence' is a value assigned by FLARToolkit to each detected marker,
+   that describes the algorithm's perceived accuracy of the pattern match.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#corners">corners</a> : Vector<div class="summaryTableDescription">[read-only]
+   a Vector of four Points that describe the four points of the detected marker's outline.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_direction">_direction</a> : int<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#direction">direction</a> : int<div class="summaryTableDescription">[read-only]
+   closest orthographic orientation of detected marker.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_flarPattern">_flarPattern</a> : <a href="../pattern/FLARPattern.html">FLARPattern</a>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_flarSource">_flarSource</a> : <a href="../source/IFLARSource.html">IFLARSource</a>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_flarSquare">_flarSquare</a> : FLARSquare<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#flarSquare">flarSquare</a> : FLARSquare<div class="summaryTableDescription">[read-only]
+   FLARSquare instance used to create this FLARMarker instance.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#matrix2D">matrix2D</a> : Matrix<div class="summaryTableDescription">[read-only]
+   return the transformation matrix of this FLARMarker
+   as a Flash Matrix object, for applying 2D transformations to Flash DisplayObject instances.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#matrix3D">matrix3D</a> : Matrix3D<div class="summaryTableDescription">[read-only]
+   return the transformation matrix of this FLARMarker
+   as a Flash Matrix3D object, for applying 3D transformations to Flash DisplayObject instances.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_patternId">_patternId</a> : int<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#patternId">patternId</a> : int<div class="summaryTableDescription">[read-only]
+   ID of this marker's pattern.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#rotation2D">rotation2D</a> : Number<div class="summaryTableDescription">[read-only]
+   returns the rotation of the marker in 2D.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_rotationX">_rotationX</a> : Number = NaN<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#rotationX">rotationX</a> : Number<div class="summaryTableDescription">[read-only]
+   rotation of marker along X axis.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_rotationY">_rotationY</a> : Number = NaN<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#rotationY">rotationY</a> : Number<div class="summaryTableDescription">[read-only]
+   rotation of marker along Y axis.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_rotationZ">_rotationZ</a> : Number = NaN<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#rotationZ">rotationZ</a> : Number<div class="summaryTableDescription">[read-only]
+   rotation of marker along Z axis.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#scale2D">scale2D</a> : Number<div class="summaryTableDescription">[read-only]
+   returns the scale of the marker for use in 2D applications.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_sessionId">_sessionId</a> : int = -1<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#sessionId">sessionId</a> : uint<div class="summaryTableDescription">[read-only]
+   ID unique to this marker in this session.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#targetCenterpoint3D">targetCenterpoint3D</a> : Point<div class="summaryTableDescription">[read-only]
+   returns centerpoint at location toward which this FLARMarker is moving
+   (target location at end of smoothing animation).</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_transformMatrix">_transformMatrix</a> : FLARDoubleMatrix34<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#transformMatrix">transformMatrix</a> : FLARDoubleMatrix34<div class="summaryTableDescription">[read-only]
+   FLARDoubleMatrix34 matrix that describes transformation of marker relative to the camera.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_vector3D">_vector3D</a> : Vector3D = null<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#vector3D">vector3D</a> : Vector3D<div class="summaryTableDescription">[read-only]
+   Vector3D instance that describes x, y, and z coordinates,
+   as well as rotationZ (stored as vector3D.w).</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#x">x</a> : Number<div class="summaryTableDescription">[read-only]
+   return x coordinate of marker.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#y">y</a> : Number<div class="summaryTableDescription">[read-only]
+   return y coordinate of marker.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#z">z</a> : Number<div class="summaryTableDescription">[read-only]
+   return z coordinate of marker.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#FLARMarker()">FLARMarker</a>(detectorResult:FLARMultiMarkerDetectorResult, transformMatrix:FLARDoubleMatrix34, flarSource:<a href="../source/IFLARSource.html">IFLARSource</a>, flarPattern:<a href="../pattern/FLARPattern.html">FLARPattern</a>)</div>
+<div class="summaryTableDescription">
+   constructor.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#applySmoothing()">applySmoothing</a>(smoother:<a href="../utils/smoother/IFLARMatrixSmoother.html">IFLARMatrixSmoother</a>, numFrames:int):void</div>
+<div class="summaryTableDescription">
+   apply smoothing algorithm over a number of frames.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#copy()">copy</a>(otherMarker:<a href="FLARMarker.html">FLARMarker</a>):void</div>
+<div class="summaryTableDescription">
+   copy the properties of a FLARMarker into this FLARMarker.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#dispose()">dispose</a>():void</div>
+<div class="summaryTableDescription">
+   free this FLARMarker instance up for garbage collection.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#incrementRemovalAge()">incrementRemovalAge</a>():uint</div>
+<div class="summaryTableDescription">
+   increment removal age by one.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#resetRemovalAge()">resetRemovalAge</a>():void</div>
+<div class="summaryTableDescription">
+   reset removal age to zero.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setSessionId()">setSessionId</a>():void</div>
+<div class="summaryTableDescription">
+   called only by FLARManager, when a new FLARMarker is detected.</div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#toString()">toString</a>():String</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLARMarker</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="centerpoint"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">centerpoint</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>centerpoint:Point</code>&nbsp;&nbsp;[read-only]<p>
+   centerpoint of marker outline in the 2D space of the screen,
+   calculated as the average of the outline's four corner points.
+   to access the centerpoint reported by FLARToolkit in three dimensions,
+   use FLARMarker.centerpoint.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get centerpoint():Point</code>
+<br>
+</div>
+<a name="_centerpoint2D"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_centerpoint2D</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var _centerpoint2D:Point = null</code>
+</div>
+<a name="_centerpoint3D"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_centerpoint3D</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var _centerpoint3D:Point = null</code>
+</div>
+<a name="centerpoint3D"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">centerpoint3D</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>centerpoint3D:Point</code>&nbsp;&nbsp;[read-only]<p>
+   centerpoint of marker outline extracted from FLARToolkit transformation matrix.
+   this centerpoint is determined based on the 3D location of the detected marker,
+   and is used by FLARManager in 3D calculations.
+   to avoid having to correct for Z location, use centerpoint2D.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get centerpoint3D():Point</code>
+<br>
+</div>
+<a name="_confidence"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_confidence</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var _confidence:Number</code>
+</div>
+<a name="confidence"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">confidence</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>confidence:Number</code>&nbsp;&nbsp;[read-only]<p>
+   'confidence' is a value assigned by FLARToolkit to each detected marker,
+   that describes the algorithm's perceived accuracy of the pattern match.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get confidence():Number</code>
+<br>
+</div>
+<a name="corners"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">corners</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>corners:Vector</code>&nbsp;&nbsp;[read-only]<p>
+   a Vector of four Points that describe the four points of the detected marker's outline.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get corners():Vector</code>
+<br>
+</div>
+<a name="_direction"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_direction</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var _direction:int</code>
+</div>
+<a name="direction"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">direction</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>direction:int</code>&nbsp;&nbsp;[read-only]<p>
+   closest orthographic orientation of detected marker.
+   value between 0 and 3, inclusive:
+   0: up
+   1: left
+   2: down
+   3: right
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get direction():int</code>
+<br>
+</div>
+<a name="_flarPattern"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_flarPattern</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var _flarPattern:<a href="../pattern/FLARPattern.html">FLARPattern</a></code>
+</div>
+<a name="_flarSource"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_flarSource</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var _flarSource:<a href="../source/IFLARSource.html">IFLARSource</a></code>
+</div>
+<a name="_flarSquare"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_flarSquare</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var _flarSquare:FLARSquare</code>
+</div>
+<a name="flarSquare"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">flarSquare</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>flarSquare:FLARSquare</code>&nbsp;&nbsp;[read-only]<p>
+   FLARSquare instance used to create this FLARMarker instance.
+   can be accessed if direct access to FLARToolkit output is desired;
+   no downsampling correction is applied.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get flarSquare():FLARSquare</code>
+<br>
+</div>
+<a name="matrix2D"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">matrix2D</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>matrix2D:Matrix</code>&nbsp;&nbsp;[read-only]<p>
+   return the transformation matrix of this FLARMarker
+   as a Flash Matrix object, for applying 2D transformations to Flash DisplayObject instances.
+   to apply to a DisplayObject, set displayObject.transform.matrix = flarMarker.matrix2D.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get matrix2D():Matrix</code>
+<br>
+</div>
+<a name="matrix3D"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">matrix3D</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>matrix3D:Matrix3D</code>&nbsp;&nbsp;[read-only]<p>
+   return the transformation matrix of this FLARMarker
+   as a Flash Matrix3D object, for applying 3D transformations to Flash DisplayObject instances.
+   to apply to a DisplayObject, set displayObject.transform.matrix3D = flarMarker.matrix3D.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get matrix3D():Matrix3D</code>
+<br>
+</div>
+<a name="_patternId"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_patternId</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var _patternId:int</code>
+</div>
+<a name="patternId"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">patternId</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>patternId:int</code>&nbsp;&nbsp;[read-only]<p>
+   ID of this marker's pattern.
+   pattern IDs are zero-indexed, and are
+   assigned to patterns in the order they were initially loaded.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get patternId():int</code>
+<br>
+</div>
+<a name="rotation2D"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rotation2D</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>rotation2D:Number</code>&nbsp;&nbsp;[read-only]<p>
+   returns the rotation of the marker in 2D.
+   this method is equivalent to rotationZ.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get rotation2D():Number</code>
+<br>
+</div>
+<a name="_rotationX"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_rotationX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var _rotationX:Number = NaN</code>
+</div>
+<a name="rotationX"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rotationX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>rotationX:Number</code>&nbsp;&nbsp;[read-only]<p>
+   rotation of marker along X axis.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get rotationX():Number</code>
+<br>
+</div>
+<a name="_rotationY"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_rotationY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var _rotationY:Number = NaN</code>
+</div>
+<a name="rotationY"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rotationY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>rotationY:Number</code>&nbsp;&nbsp;[read-only]<p>
+   rotation of marker along Y axis.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get rotationY():Number</code>
+<br>
+</div>
+<a name="_rotationZ"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_rotationZ</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var _rotationZ:Number = NaN</code>
+</div>
+<a name="rotationZ"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rotationZ</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>rotationZ:Number</code>&nbsp;&nbsp;[read-only]<p>
+   rotation of marker along Z axis.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get rotationZ():Number</code>
+<br>
+</div>
+<a name="scale2D"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">scale2D</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>scale2D:Number</code>&nbsp;&nbsp;[read-only]<p>
+   returns the scale of the marker for use in 2D applications.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get scale2D():Number</code>
+<br>
+</div>
+<a name="_sessionId"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_sessionId</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var _sessionId:int = -1</code>
+</div>
+<a name="sessionId"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sessionId</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>sessionId:uint</code>&nbsp;&nbsp;[read-only]<p>
+   ID unique to this marker in this session.
+   no two markers in a session share the same sessionId.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get sessionId():uint</code>
+<br>
+</div>
+<a name="targetCenterpoint3D"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">targetCenterpoint3D</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>targetCenterpoint3D:Point</code>&nbsp;&nbsp;[read-only]<p>
+   returns centerpoint at location toward which this FLARMarker is moving
+   (target location at end of smoothing animation).
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get targetCenterpoint3D():Point</code>
+<br>
+</div>
+<a name="_transformMatrix"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_transformMatrix</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var _transformMatrix:FLARDoubleMatrix34</code>
+</div>
+<a name="transformMatrix"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">transformMatrix</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>transformMatrix:FLARDoubleMatrix34</code>&nbsp;&nbsp;[read-only]<p>
+   FLARDoubleMatrix34 matrix that describes transformation of marker relative to the camera.
+   apply to FLARBaseNodes that should appear 'tethered' to the marker.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get transformMatrix():FLARDoubleMatrix34</code>
+<br>
+</div>
+<a name="_vector3D"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_vector3D</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var _vector3D:Vector3D = null</code>
+</div>
+<a name="vector3D"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">vector3D</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>vector3D:Vector3D</code>&nbsp;&nbsp;[read-only]<p>
+   Vector3D instance that describes x, y, and z coordinates,
+   as well as rotationZ (stored as vector3D.w).
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get vector3D():Vector3D</code>
+<br>
+</div>
+<a name="x"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">x</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>x:Number</code>&nbsp;&nbsp;[read-only]<p>
+   return x coordinate of marker.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get x():Number</code>
+<br>
+</div>
+<a name="y"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">y</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>y:Number</code>&nbsp;&nbsp;[read-only]<p>
+   return y coordinate of marker.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get y():Number</code>
+<br>
+</div>
+<a name="z"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">z</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>z:Number</code>&nbsp;&nbsp;[read-only]<p>
+   return z coordinate of marker.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get z():Number</code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="FLARMarker()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">FLARMarker</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function FLARMarker(detectorResult:FLARMultiMarkerDetectorResult, transformMatrix:FLARDoubleMatrix34, flarSource:<a href="../source/IFLARSource.html">IFLARSource</a>, flarPattern:<a href="../pattern/FLARPattern.html">FLARPattern</a>)</code><p>
+   constructor.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">detectorResult</span>:FLARMultiMarkerDetectorResult</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">transformMatrix</span>:FLARDoubleMatrix34</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">flarSource</span>:<a href="../source/IFLARSource.html">IFLARSource</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">flarPattern</span>:<a href="../pattern/FLARPattern.html">FLARPattern</a></code></td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="applySmoothing()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">applySmoothing</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function applySmoothing(smoother:<a href="../utils/smoother/IFLARMatrixSmoother.html">IFLARMatrixSmoother</a>, numFrames:int):void</code><p>
+   apply smoothing algorithm over a number of frames.
+   called by FLARManager as part of marker tracking/maintenance process.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">smoother</span>:<a href="../utils/smoother/IFLARMatrixSmoother.html">IFLARMatrixSmoother</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">numFrames</span>:int</code></td>
+</tr>
+</table>
+</div>
+<a name="copy()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">copy</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function copy(otherMarker:<a href="FLARMarker.html">FLARMarker</a>):void</code><p>
+   copy the properties of a FLARMarker into this FLARMarker.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">otherMarker</span>:<a href="FLARMarker.html">FLARMarker</a></code></td>
+</tr>
+</table>
+</div>
+<a name="dispose()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function dispose():void</code><p>
+   free this FLARMarker instance up for garbage collection.
+   </p></div>
+<a name="incrementRemovalAge()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">incrementRemovalAge</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function incrementRemovalAge():uint</code><p>
+   increment removal age by one.
+   removal age is the number of frames that have elapsed since this FLARMarker was last detected by FLARToolkit.
+   this method is used by FLARManager, and should generally not be called by developers.
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>uint</code></td>
+</tr>
+</table>
+</div>
+<a name="resetRemovalAge()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">resetRemovalAge</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function resetRemovalAge():void</code><p>
+   reset removal age to zero.
+   removal age is the number of frames that have elapsed since this FLARMarker was last detected by FLARToolkit.
+   this method is used by FLARManager, and should generally not be called by developers.
+   </p></div>
+<a name="setSessionId()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setSessionId</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setSessionId():void</code><p>
+   called only by FLARManager, when a new FLARMarker is detected.
+   this method should not be called by developers.
+   (poor OOP, i know....sorry.)
+   </p></div>
+<a name="toString()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">toString</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function toString():String</code>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code></td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">By Eric Socolofsky, http://transmote.com.  Released under the GNU GPL (http://www.gnu.org/copyleft/gpl.html).</center>
+</div>
+</body>
+</html>
+<!--By Eric Socolofsky, http://transmote.com.  Released under the GNU GPL (http://www.gnu.org/copyleft/gpl.html).-->

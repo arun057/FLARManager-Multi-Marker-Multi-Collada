@@ -1,0 +1,370 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print">
+<meta content="FLARGeomUtils,com.transmote.flar.utils.geom.FLARGeomUtils,calcFLARMatrixRotations,calcFLARMatrixScales,convertFLARMatrixToFlashMatrix,convertFLARMatrixToFlashMatrix3D,createFLARIdentityMatrix,createFLARIdentityTransMat,dumpFLARMatrix,dumpMatrix3D" name="keywords">
+<title>com.transmote.flar.utils.geom.FLARGeomUtils</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'FLARGeomUtils - FLARManager Reference';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">FLARManager Reference</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../index-list.html')" href="../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../index.html?com/transmote/flar/utils/geom/FLARGeomUtils.html&amp;com/transmote/flar/utils/geom/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;FLARGeomUtils</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class FLARGeomUtils"); titleBar_setSubNav(false,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.transmote.flar.utils.geom</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class FLARGeomUtils</td>
+</tr>
+</table>
+<p></p>
+  collection of utils used for FLAR matrix transformation / conversion.
+  
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#FLARGeomUtils()">FLARGeomUtils</a>()</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLARGeomUtils</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#calcFLARMatrixRotations()">calcFLARMatrixRotations</a>(fm:FLARDoubleMatrix34, bInDegrees:Boolean = true):Vector3D</div>
+<div class="summaryTableDescription">[static]
+   calculate rotation around X, Y, and Z axes,
+   and return stored in a Vector3D instance.</div>
+</td><td class="summaryTableOwnerCol">FLARGeomUtils</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#calcFLARMatrixScales()">calcFLARMatrixScales</a>(fm:FLARDoubleMatrix34):Vector3D</div>
+<div class="summaryTableDescription">[static]
+   calculate scale in X, Y, and Z dimensions,
+   and return stored in a Vector3D instance.</div>
+</td><td class="summaryTableOwnerCol">FLARGeomUtils</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#convertFLARMatrixToFlashMatrix()">convertFLARMatrixToFlashMatrix</a>(fm:FLARDoubleMatrix34, bMirror:Boolean = true):Matrix3D</div>
+<div class="summaryTableDescription">[static]
+   convert a FLAR matrix to a Flash Matrix3D.</div>
+</td><td class="summaryTableOwnerCol">FLARGeomUtils</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#convertFLARMatrixToFlashMatrix3D()">convertFLARMatrixToFlashMatrix3D</a>(fm:FLARDoubleMatrix34, bMirror:Boolean = true):Matrix3D</div>
+<div class="summaryTableDescription">[static]
+   convert a FLAR matrix to a Flash Matrix3D.</div>
+</td><td class="summaryTableOwnerCol">FLARGeomUtils</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createFLARIdentityMatrix()">createFLARIdentityMatrix</a>():FLARDoubleMatrix34</div>
+<div class="summaryTableDescription">[static]
+   create an identity matrix as a FLARDoubleMatrix34.</div>
+</td><td class="summaryTableOwnerCol">FLARGeomUtils</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createFLARIdentityTransMat()">createFLARIdentityTransMat</a>():FLARTransMatResult</div>
+<div class="summaryTableDescription">[static]
+   create an identity matrix as a FLARTransMatResult.</div>
+</td><td class="summaryTableOwnerCol">FLARGeomUtils</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#dumpFLARMatrix()">dumpFLARMatrix</a>(fm:FLARDoubleMatrix34, sd:int = 4):String</div>
+<div class="summaryTableDescription">[static]
+   format a FLAR matrix as a String.</div>
+</td><td class="summaryTableOwnerCol">FLARGeomUtils</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#dumpMatrix3D()">dumpMatrix3D</a>(matrix:Matrix3D, sd:int = 4):String</div>
+<div class="summaryTableDescription">[static]
+   Format Flash matrix as a String.</div>
+</td><td class="summaryTableOwnerCol">FLARGeomUtils</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="FLARGeomUtils()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">FLARGeomUtils</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function FLARGeomUtils()</code>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="calcFLARMatrixRotations()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">calcFLARMatrixRotations</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function calcFLARMatrixRotations(fm:FLARDoubleMatrix34, bInDegrees:Boolean = true):Vector3D</code><p>
+   calculate rotation around X, Y, and Z axes,
+   and return stored in a Vector3D instance.
+   NOTE: does not account for scale, as FLARToolkit matrices always scale equally in all three dimensons.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">fm</span>:FLARDoubleMatrix34</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">bInDegrees</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Vector3D</code></td>
+</tr>
+</table>
+</div>
+<a name="calcFLARMatrixScales()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">calcFLARMatrixScales</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function calcFLARMatrixScales(fm:FLARDoubleMatrix34):Vector3D</code><p>
+   calculate scale in X, Y, and Z dimensions,
+   and return stored in a Vector3D instance.
+   NOTE: FLARToolkit matrices should always scale equally in all three dimensions,
+      so this method is not likely to be useful.  but, it's here now, so here it stays.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">fm</span>:FLARDoubleMatrix34</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Vector3D</code></td>
+</tr>
+</table>
+</div>
+<a name="convertFLARMatrixToFlashMatrix()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">convertFLARMatrixToFlashMatrix</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function convertFLARMatrixToFlashMatrix(fm:FLARDoubleMatrix34, bMirror:Boolean = true):Matrix3D</code><p>
+   convert a FLAR matrix to a Flash Matrix3D.
+   deprecated: this method is equivalent to convertFLARMatrixToFlashMatrix3D,
+   and is present only for legacy support.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">fm</span>:FLARDoubleMatrix34</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">bMirror</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Matrix3D</code></td>
+</tr>
+</table>
+</div>
+<a name="convertFLARMatrixToFlashMatrix3D()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">convertFLARMatrixToFlashMatrix3D</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function convertFLARMatrixToFlashMatrix3D(fm:FLARDoubleMatrix34, bMirror:Boolean = true):Matrix3D</code><p>
+   convert a FLAR matrix to a Flash Matrix3D.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">fm</span>:FLARDoubleMatrix34</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">bMirror</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Matrix3D</code></td>
+</tr>
+</table>
+</div>
+<a name="createFLARIdentityMatrix()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createFLARIdentityMatrix</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function createFLARIdentityMatrix():FLARDoubleMatrix34</code><p>
+   create an identity matrix as a FLARDoubleMatrix34.
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>FLARDoubleMatrix34</code></td>
+</tr>
+</table>
+</div>
+<a name="createFLARIdentityTransMat()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createFLARIdentityTransMat</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function createFLARIdentityTransMat():FLARTransMatResult</code><p>
+   create an identity matrix as a FLARTransMatResult.
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>FLARTransMatResult</code></td>
+</tr>
+</table>
+</div>
+<a name="dumpFLARMatrix()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dumpFLARMatrix</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function dumpFLARMatrix(fm:FLARDoubleMatrix34, sd:int = 4):String</code><p>
+   format a FLAR matrix as a String.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">fm</span>:FLARDoubleMatrix34</code> &mdash;  FLAR matrix to return as a String.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">sd</span>:int</code> (default = <code>4</code>)<code></code> &mdash;  number of significant digits to display.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code></td>
+</tr>
+</table>
+</div>
+<a name="dumpMatrix3D()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dumpMatrix3D</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function dumpMatrix3D(matrix:Matrix3D, sd:int = 4):String</code><p>
+   Format Flash matrix as a String.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">matrix</span>:Matrix3D</code> &mdash; matrix to return as a String.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">sd</span>:int</code> (default = <code>4</code>)<code></code> &mdash;  number of significant digits to display.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code></td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">By Eric Socolofsky, http://transmote.com.  Released under the GNU GPL (http://www.gnu.org/copyleft/gpl.html).</center>
+</div>
+</body>
+</html>
+<!--By Eric Socolofsky, http://transmote.com.  Released under the GNU GPL (http://www.gnu.org/copyleft/gpl.html).-->
